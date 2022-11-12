@@ -1,0 +1,200 @@
+.card {
+  position: relative;
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 5em;
+}
+
+.card-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+  transition: background-color 0.5s ease-in;
+}
+
+.card-item-modifier {
+  width: 300px;
+  height: 300px;
+}
+
+.card-item:hover {
+  cursor: pointer;
+  background-color: rgb(219, 211, 211);
+}
+
+.card-item-2 {
+  margin-left: 7em;
+  bottom: 0;
+  position: absolute;
+  border: 30px solid hsl(349, 71%, 52%);
+}
+
+.card-item-3 {
+  top: -18%;
+  position: absolute;
+  border: 30px solid hsl(230, 89%, 62%);
+}
+
+.card-item-4 {
+  top: -18%;
+  margin-left: 17em;
+  position: absolute;
+  border: 30px solid hsl(39, 89%, 49%);
+}
+
+/* 2nd card  */
+.second-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.user-title,
+.computer-title {
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+.winner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.winner h3 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.winner .playBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 44px;
+  font-size: 1.2rem;
+  padding: 1.5em 1em;
+  border-radius: 5px;
+  text-transform: unset;
+  text-transform: uppercase;
+  font-family: inherit;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  color: hsl(293, 71%, 65%);
+}
+
+.winner .restart-btn{
+    padding: 1em;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    margin-top: 2em;
+    color: limegreen;
+    letter-spacing: 1px;
+}
+
+.winner .playBtn:hover {
+  cursor: pointer;
+  color: hsl(293, 52%, 53%);
+}
+
+.winner .playBtn:focus {
+  border: 1px solid hsl(217, 16%, 45%);
+}
+
+.winner .playBtn:active {
+  background-color: hsl(326, 18%, 75%);
+}
+
+.emptyBox {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: hsl(229, 25%, 31%);
+}
+
+
+@media(max-width:600px){
+  .card {
+    width: 95%;
+    margin-top: 5em;
+  }
+
+
+  .user-title,
+  .computer-title{
+    font-size: .9rem;
+    order: 2;
+    margin-top: 2em;
+  }
+
+  .user-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;;
+  }
+
+  .computer-card {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .card-item{
+    width: 150px;
+    height: 150px;
+  }
+
+  .card-item-2{
+    margin-left: 6em;
+  }
+
+  .card-item-4{
+    margin-left: 12em;
+  }
+
+  .second-card{
+    position: relative;
+    align-items: center;
+    margin-top: 5em;
+  }
+
+  .winner{
+    position: absolute;
+    top: 90%;
+    margin-top: 5em;
+    margin-left: 3em;
+    width: 300px;
+  }
+
+  .winner h3{
+    font-size: 2rem;
+  }
+
+
+
+  .winner .playBtn{
+    height: 58px;
+    font-size: 1.2rem;
+    padding: 1em 1em;
+  }
+}

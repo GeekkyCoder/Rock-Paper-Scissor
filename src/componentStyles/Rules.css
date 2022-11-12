@@ -1,0 +1,10 @@
+.rules-container{
+    width: 200px;
+    margin-left: auto;
+}
+
+@media (max-width:600px){
+    .rules-container{
+        margin: 5em auto;
+    }
+}
