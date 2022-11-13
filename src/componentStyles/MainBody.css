@@ -131,7 +131,7 @@
 @media(max-width:600px){
   .card {
     width: 95%;
-    margin-top: 5em;
+    margin-top: 10em;
   }
 
 
@@ -182,9 +182,10 @@
     position: absolute;
     top: 90%;
     margin-top: 5em;
-    margin-left: 3em;
     width: 300px;
+    left: 10%;
   }
+
 
   .winner h3{
     font-size: 2rem;
