@@ -3,9 +3,9 @@ import { cardsArray } from "../Cards/card";
 
 const Context = createContext();
 
-
 function ContextProvider(props) {
   const [hasUserChoosenCard, setHasUserChoosenCard] = useState(false);
+  const [hasComputerChoosenCard, setHasComputerChoosenCard] = useState(false);
   const [gameOver, setGameOver] = useState(false);
   const [availableCards, setAvailableCards] = useState(cardsArray);
   const [userChoosenCard, setuserChoosenCard] = useState([]);
@@ -28,6 +28,7 @@ function ContextProvider(props) {
 
   const handleGameOver = () => {
     setHasUserChoosenCard(false);
+    setHasComputerChoosenCard(false);
     setComputerGuessedCard([]);
     setuserChoosenCard([]);
   };
@@ -46,10 +47,12 @@ function ContextProvider(props) {
     );
     setComputerCardName(computerCard.name);
     setComputerGuessedCard(computerCard);
+    setHasComputerChoosenCard(true);
   };
 
   const handleGameRestart = () => {
     setHasUserChoosenCard(false);
+    setHasComputerChoosenCard(false);
     setScoreCount(0);
     setShouldGameRestart(true);
   };
@@ -124,6 +127,7 @@ function ContextProvider(props) {
         handleComputerCard,
         handleGameRestart,
         shouldGameRestart,
+        hasComputerChoosenCard,
         statusText,
         bestScore,
       }}

@@ -13,6 +13,7 @@ function MainBody() {
     handleUserClickOnImage,
     handleGameOver,
     userChoosenCard,
+    hasComputerChoosenCard,
     computerGuessedCard,
     handleComputerCard,
     handleGameRestart,
@@ -72,7 +73,7 @@ function MainBody() {
               />
             </div>
           </div>
-          <div className="winner">
+         {hasComputerChoosenCard && <div className="winner">
             <h3>{statusText}</h3>
            {!shouldGameRestart && <button className="playBtn" onClick={handleGameOver}>
               Play Again
@@ -81,7 +82,7 @@ function MainBody() {
          {shouldGameRestart &&  <button className="restart-btn" onClick={handleGameRestart}>
               Restart
             </button>}
-          </div>
+          </div>}
           <div className="computer-card">
             <h2 className="computer-title">The House Picked</h2>
             
