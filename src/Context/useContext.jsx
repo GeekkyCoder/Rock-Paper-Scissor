@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { createContext } from "react";
+import React, { useState, createContext } from "react";
 import { cardsArray } from "../Cards/card";
 
 const Context = createContext();
+
 
 function ContextProvider(props) {
   const [hasUserChoosenCard, setHasUserChoosenCard] = useState(false);
@@ -28,6 +28,8 @@ function ContextProvider(props) {
 
   const handleGameOver = () => {
     setHasUserChoosenCard(false);
+    setComputerGuessedCard([]);
+    setuserChoosenCard([]);
   };
 
   const handleUserCard = (id) => {
@@ -100,7 +102,7 @@ function ContextProvider(props) {
 
   React.useEffect(() => {
     if (scoreCount > 10) {
-        alert("maximum limit is 10 😃")
+      alert("maximum limit is 10 😃");
       setShouldGameRestart(true);
     } else {
       setShouldGameRestart(false);
@@ -108,7 +110,6 @@ function ContextProvider(props) {
       localStorage.setItem("bestScore", JSON.stringify(scoreCount));
     }
   }, [scoreCount]);
-
 
   return (
     <Context.Provider

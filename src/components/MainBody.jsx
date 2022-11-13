@@ -84,7 +84,8 @@ function MainBody() {
           </div>
           <div className="computer-card">
             <h2 className="computer-title">The House Picked</h2>
-            {hasUserChoosenCard ? (
+            
+             {hasUserChoosenCard && 
               <div
                 style={{
                   border: `35px solid ${computerGuessedCard.borderColor}`,
@@ -94,14 +95,14 @@ function MainBody() {
                 <img
                   style={{ width: "65%" }}
                   src={computerGuessedCard.imgSrc}
-                  alt="computer-icon"
+                  // alt="computer-icon"
                 />
               </div>
-            ) : (
-              <div className="emptyBox"></div>
-            )}
+              }
+              {!hasUserChoosenCard && <div className="emptyBox"></div>}
           </div>
         </div>
+
       )}
       {!hasUserChoosenCard && <RulesModal />}
     </div>
